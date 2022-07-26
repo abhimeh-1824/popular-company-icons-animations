@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 100px;
+}
+
+:root {
+    --bg-color: rgb(85, 207, 134);
+    --bg-second-color: rgb(72, 228, 207);
+    --first-leaf-color: rgb(255, 255, 255);
+    --second-leaf-color: rgb(156, 224, 184);
+}
+
+.background-circle {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(var(--bg-color), var(--bg-second-color));
+    margin: auto;
+    margin-top: 10px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 20px 20px;
+    gap: 5px;
+    justify-content: center;
+    border-radius: 50%;
+    animation-name: rotionion;
+    animation-duration: 3s;
+    animation-iteration-count: 1s;
+    animation-direction: alternate-reverse;
+}
+@keyframes rotionion {
+    0% {
+        transform: rotate(0deg);
+        border: 2px solid  var(--bg-second-color);
+    }
+    25% {
+        transform: rotate(0deg);
+        border: 4px solid  var(--bg-second-color);
+
+    }
+    50% {
+        transform: rotate(0deg);
+        border: 8px solid  var(--bg-second-color);
+
+    }
+    75% {
+        transform: rotate(0deg);
+        border: 16px solid  var(--bg-second-color);
+
+    }
+    100% {
+        transform: rotate(360deg);
+        border: 32px solid  var(--bg-second-color);
+
+    }
+}
+
+.leaf::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: var(--first-leaf-color);
+    position: absolute;
+    align-self: center;
+    border-radius: 50% 50% 50% 0%;
+    top: 30px;
+}
+
+.leaf::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: var(--second-leaf-color);
+
+    position: absolute;
+    bottom: 20px;
+    border-radius: 50% 50% 50% 0%;
+}
+
+.leaf1::before {
+    transform: rotate(270deg);
+}
+
+.leaf1::after {
+    transform: rotate(180deg);
+}
+.leaf1{
+    margin-left: -30px;
+}
+.leaf2{
+    margin-left: -20px;
+}
+.leaf2::before {
+    transform: rotate(0deg);
+    background-color: var(--second-leaf-color);
+}
+
+.leaf2::after {
+    transform: rotate(90deg);
+    background-color: var(--first-leaf-color);
+}
+
