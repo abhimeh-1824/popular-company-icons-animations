@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::after {
+    --pink: rgb(252, 0, 164);
+    --perpale: rgb(126, 10, 250);
+    --darkPink: rgb(254, 13, 85);
+    --yellow: rgb(255, 193, 0);
+    --white: rgb(255, 255, 255)
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    gap:20px;
+}
+
+.instagram-circle {
+    border-radius: 50%;
+    background-image:linear-gradient(198deg,rgb(126, 10, 250) 3%,rgb(252, 0, 164) 23%,rgb(254, 13, 85) 67%,rgb(255, 193, 0) 100%);
+    width: 100px;
+    height:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.instagram-squre{
+    border: 3px solid white;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation-name: squre;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes squre{
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(0deg);
+
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.instagram-md-circle{
+    width: 25px;
+    height: 25px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+.instagram-sm-circle{
+    width: 5px;
+    height: 5px;
+    border: 3px solid white;
+    border-radius: 50px;
+    position: absolute;
+    top: 5px;
+    left: 34px;
+}
